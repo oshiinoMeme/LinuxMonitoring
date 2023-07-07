@@ -1,10 +1,11 @@
 #!/bin/bash
 
 parameter=$1
-if [ $# -gt 1 ]; then
-  echo "Too many parameters. Please enter only one."
+if [ $# -ne 1 ]; then
+  echo "Incorrect input. Should be exactly one parameter."
 elif [[ $parameter =~ ^[0-9]+$ ]]; then
-  echo "Incorrect parametr. Parametr should be a text"
+  echo "Incorrect input. Parameter should be a text"
 else
-  echo "Parametr: $parameter"
+  echo "Parameter: $parameter"
 fi
+
